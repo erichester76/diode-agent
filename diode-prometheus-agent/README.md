@@ -78,15 +78,32 @@ Run `diode-prometheus-agent` with a discovery configuration file named `config.y
 diode-prometheus-agent -c config.yaml
 ```
 
-
 The Diode prometheus agent tries to fetch information from network devices about the following NetBox object types:
+
+- [Virtualization.Cluster](https://netboxlabs.com/docs/netbox/en/stable/models/virtualization/cluster/)
+- [Virtualization.ClusterGroup](https://netboxlabs.com/docs/netbox/en/stable/models/virtualization/clustergroup/)
+- [Virtualization.ClusterType](https://netboxlabs.com/docs/netbox/en/stable/models/virtualization/clustertype/)
+- [Virtualization.VirtualMachine](https://netboxlabs.com/docs/netbox/en/stable/models/virtualization/virtualmachine/)
+- [Virtualization.VirtualDisk](https://netboxlabs.com/docs/netbox/en/stable/models/virtualization/virtualmachine/)
+- [Virtualization.VMInterface](https://netboxlabs.com/docs/netbox/en/stable/models/virtualization/vminterface/)
+- [Virtualization.Datastore]*if netbox-storage-plugin is installed 
 
 - [DCIM.Device](https://netboxlabs.com/docs/netbox/en/stable/models/dcim/device/)
 - [DCIM.DeviceType](https://netboxlabs.com/docs/netbox/en/stable/models/dcim/devicetype/)
 - [DCIM.Interface](https://netboxlabs.com/docs/netbox/en/stable/models/dcim/interface/)
+- [DCIM.Cable](https://netboxlabs.com/docs/netbox/en/stable/models/dcim/cable/)
 - [DCIM.Platform](https://netboxlabs.com/docs/netbox/en/stable/models/dcim/platform/)
+
+- [Storage.Disk]*if netbox-storage-plugin is installed 
+- [Storage.Controller]*if netbox-storage-plugin is installed 
+- [Storage.DiskGroup]*if netbox-storage-plugin is installed 
+- [Storage.LogicalDisk]*if netbox-storage-plugin is installed 
+- [Storage.Partition]*if netbox-storage-plugin is installed 
+- [Storage.Share]*if netbox-storage-plugin is installed 
+
 - [IPAM.IPAddress](https://netboxlabs.com/docs/netbox/en/stable/models/ipam/ipaddress/)
 - [IPAM.Prefix](https://netboxlabs.com/docs/netbox/en/stable/models/ipam/prefix/)
+- [IPAM.Vlan](https://netboxlabs.com/docs/netbox/en/stable/models/ipam/vlan/)
 
 ## License
 
